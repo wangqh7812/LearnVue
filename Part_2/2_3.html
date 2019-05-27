@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue 示例</title>
+</head>
+<body>
+    <div id="app">
+        {{ date }}
+    </div>
+
+    <script src="../vue.js"></script>
+    <script>
+        var app = new Vue ({
+            el: '#app',
+            data: {
+                date: new Date()
+            },
+            mounted: function () {
+                var _this = this;
+                this.timer = setInterval(function () {
+                    _this.date = new Date();
+                },1000);
+            },
+            beforeDestroy: function () {
+                if (this.timer) {
+                    clearInterval(this.timer);
+                }
+            }
+        })
+    </script>
+</body>
+</html>

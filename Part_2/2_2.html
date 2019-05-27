@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue 示例</title>
+</head>
+<body>
+    <div id="app">
+
+    </div>
+
+    <script src="../vue.js"></script>
+    <script>
+/*
+        var app = new Vue ({
+            el: '#app',
+            data: {
+                a: 2
+            }
+        });
+
+        console.log(app.a);     //2
+*/
+
+        var myData = {
+            a:1
+        };
+
+        var app = new Vue ({
+            el: '#app',
+            data: myData
+        });
+
+        console.log("1:" + app.a);
+
+        app.a = 2;
+
+        console.log("2:" + app.a);
+        console.log("3:" + myData.a);
+
+        myData.a = 3;
+
+        console.log("4:" + app.a);
+        console.log("5:" + myData.a);
+    </script>
+</body>
+</html>

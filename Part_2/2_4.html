@@ -6,8 +6,10 @@
 </head>
 <body>
     <div id="app">
-        <input type="text" v-model="name" placeholder="你的名字">
-        <h1>你好，{{ name }}</h1>
+        <div v-pre>{{ 这里的内容不会被编译 }}</div>
+        <div>{{ number / 10 }}</div>
+        <div>{{ isOK ? '确定' : '取消'}}</div>
+        <div>{{ text.split(',').reverse().join(',') }}</div>
     </div>
 
     <script src="../vue.js"></script>
@@ -15,7 +17,9 @@
         var app = new Vue ({
             el: '#app',
             data: {
-                name: ''
+                number: 100,
+                isOK: false,
+                text: '123,456'
             }
         })
     </script>
