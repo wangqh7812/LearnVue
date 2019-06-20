@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.2.1.2</title>
+</head>
+<body>
+    <div id="app">
+        <template v-if="status === 1">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+        </template>
+    </div>
+
+    <script src="../vue.js"></script>
+    <script>
+        var app = new Vue ({
+            el: '#app',
+            data: {
+                status: 1
+            }
+        })
+    </script>
+</body>
+</html>

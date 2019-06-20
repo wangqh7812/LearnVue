@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.3.1.2</title>
+</head>
+<body>
+<div id="app">
+    <ul>
+        <li v-for="(book, index) in books">{{ index}} - {{ book.name }}</li>
+    </ul>
+</div>
+
+<script src="../vue.js"></script>
+<script>
+    var app = new Vue ({
+        el: '#app',
+        data: {
+            books: [
+                { name: '《Vue.js》'},
+                { name: '《Vue.js》'},
+                { name: '《Vue.js》'}
+            ]
+        }
+    })
+</script>
+</body>
+</html>
