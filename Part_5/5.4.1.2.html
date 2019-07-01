@@ -5,6 +5,26 @@
     <title>5.4.1.2</title>
 </head>
 <body>
+    <div id="app">
+        点击次数： {{ counter }}
+        <button @click="handleAdd()">+1</button>
+        <button @click="handleAdd(10)">+10</button>
+    </div>
 
+    <script src="../vue.js"></script>
+    <script>
+        var app = new Vue ({
+            el: '#app',
+            data: {
+                counter: 0
+            },
+            methods: {
+                handleAdd: function (count) {
+                    count = count || 1;
+                    this.counter += count;
+                }
+            }
+        })
+    </script>
 </body>
 </html>
