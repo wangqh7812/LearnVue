@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>6.1.1</title>
+    <title>6.2.1</title>
 </head>
 <body>
     <div id="app">
-        <input type="text" v-model="message" placeholder="请输入。。。">
-        <p>你输入的内容是：{{ message }}</p>
+        <input type="radio" v-model="picked" :value="value1">
+        <lable>单选按钮</lable>
+        <p>{{ picked }}</p>
+        <p>{{ value1 }}</p>
     </div>
 
     <script type="text/javascript" src="../vue.js"></script>
@@ -15,7 +17,8 @@
         var app = new Vue ({
             el: '#app',
             data: {
-                message: ''
+                picked: false,
+                value1: 123
             }
         })
     </script>

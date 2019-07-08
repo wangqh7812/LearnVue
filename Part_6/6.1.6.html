@@ -2,12 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>6.1.1</title>
+    <title>6.1.6</title>
 </head>
 <body>
     <div id="app">
-        <input type="text" v-model="message" placeholder="请输入。。。">
-        <p>你输入的内容是：{{ message }}</p>
+        <select v-model="selected">
+            <option value="html">html</option>
+            <option value="js">js</option>
+            <option value="css">css</option>
+        </select>
+        <p>选择的是：{{ selected }}</p>
     </div>
 
     <script type="text/javascript" src="../vue.js"></script>
@@ -15,7 +19,7 @@
         var app = new Vue ({
             el: '#app',
             data: {
-                message: ''
+                selected: 'html'
             }
         })
     </script>

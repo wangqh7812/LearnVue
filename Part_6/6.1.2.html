@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>6.1.1</title>
+    <title>6.1.2</title>
 </head>
 <body>
     <div id="app">
-        <input type="text" v-model="message" placeholder="请输入。。。">
+        <input type="text" @input="handleInput" placeholder="请输入。。。">
         <p>你输入的内容是：{{ message }}</p>
     </div>
 
@@ -16,6 +16,11 @@
             el: '#app',
             data: {
                 message: ''
+            },
+            methods: {
+                handleInput: function (e) {
+                    this.message = e.target.value;
+                }
             }
         })
     </script>
